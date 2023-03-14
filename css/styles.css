@@ -6,22 +6,16 @@
     --logo-color: #2E2F42; 
     --button-color: #4D5AE5;
     --button-activ: #404BBF;
+    --logo-color-foot: #F4F4FD;
 }
 
 body {
     background-color: var(--text-color);
-    color: var(--title-text-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 0.03em;
+    color: var(--text-list);
 }
-ul {
-    list-style: none;
-}
-h1 {
-    text-align: center;
-    font-size: 56px;
-}
-h2 {
+.section-title {
     text-align: center;
     font-weight: 700;
     font-size: 36px;
@@ -30,14 +24,19 @@ h2 {
     text-transform: capitalize;
     color: var(--logo-color);
 }
-h3 {
+.feature-title, 
+.specialist-title,
+.goods-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--logo-color);
 }
-p {
+.feature-explanation, 
+.specialist-profession, 
+.adress-profession,
+.goods-services {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -55,18 +54,21 @@ p {
     justify-content: space-between;
 }
 .logo {
-    color: var(--logo-color);
-    font-family: 'Raleway';
+    color: var(--button-color);
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
-    line-height: 21px;
-    text-decoration: none;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     padding: 0;
 }
 .logo > span { 
-    color: var(--fishnet-text-color);
+    color: var(--logo-color);
+}
+.list {
+    list-style: none;
 }
 .header-nav {
     display: flex;
@@ -86,14 +88,16 @@ p {
     display: inline-block;
     margin: 0 20px;
 }
-.auht-nav {
+.header-address {
+    display: flex;
+    align-items: center;
     margin-right: 156px;
 }
 .site-nav .link {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    color: #2E2F42;
+    color: var(--logo-color);
     letter-spacing: 0.02em;
 }
 .auht-nav .link {
@@ -101,7 +105,7 @@ p {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;
+    color: var(--text-list);
     font-style: normal;
 }
 .site-nav .link:hover,
@@ -117,7 +121,7 @@ p {
 .auht-nav .link:focus {
     color: var(--fishnet-text-color);
 }
-.hero .container {
+.hero {
     display: grid;
     place-items: center;
     width: 1440px;
@@ -136,7 +140,7 @@ p {
     top: 188px;
     font-weight: 700;
     font-size: 56px;
-    line-height: 1.071;
+    line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
 }
@@ -168,7 +172,7 @@ p {
 .hero-btn:focus {
     background: var(--button-activ);
 }
-.visually-hidden {
+.hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -204,13 +208,14 @@ p {
     margin: 0 156px; 
 }
 .section.specialist {
-    background: #F4F4FD;
+    background: var(--logo-color-foot);
 }
 .specialist {
     width: 1440px;
     height: 732px;
     margin: 0 0; 
     text-align: center;
+    background-color: var(--text-color);
 }
 .specialist li {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -222,8 +227,8 @@ p {
     height: 312px;
     margin: 0;
 }
-.footer .logo {
-    color: var(--text-color);
+.footer .logo > span {
+    color: var(--logo-color-foot);
     font-style: normal;
 }
 .footer .container {
@@ -245,7 +250,7 @@ p {
     padding: 12px 20px;
     border: 1px solid #E7E9FC;
     color: var(--button-color);
-    background: #F4F4FD;
+    background: var(--logo-color-foot);
     border-radius: 4px;
     text-align: center;
     text-decoration: none;
